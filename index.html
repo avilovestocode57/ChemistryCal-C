@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="body-container">
+
+    <header>
+        <nav>
+            <h3>Chemistry Cal-C</h3>
+        </nav>
+        <div class="mast">
+            <p>Determination of Coefficient of Viscosity and Percentage Composition of Sugar Solution using Ostwald's Viscometer</p>
+            <p>Developer: Avirup Ghosh</p>
+        </div>
+
+    </header>
+    <main>
+        <div class="results modules">
+            <h3 class="boxtop">Results</h3>
+            <div class="box">
+                <div class="item1 result-item">
+                    <span>Room Temperature </span>
+                    <input type="number" step="0.00001" class="rt" id="">
+                </div>
+                <div class="item2 result-item">
+                    <span >Density of water at that temperature </span>   
+                    <input type="number" step="0.00001" class="d_water" id="">   
+                </div>
+                <div class="item3 result-item">
+                    <span >Coefficient of Viscosity of water at that temperature</span>     
+                    <input type="number" step="0.00001" class="cv_water" id="">
+                </div>
+                <div class="button-list">
+                    <button class="action reset">Reset</button>
+                    <button class="action result-next" class="">Next</button>
+                </div>
+
+                
+            </div>
+        </div>
+    <div class="modules table1-module">
+        <h3 class="boxtop">Measurement of Density</h3>
+        <div class="box">
+            <table class="table1">
+                <tr>
+                    <th>Weight of empty sp. gravity bottle, W(gm.) </th>
+                    <th>Weight of sp. gravity bottle filled with water, W1 (gm.)  </th>
+                    <th>Weight of water, W1-W= X (gm.)  </th>
+                    <th>Percentage of sugar solution </th>
+                    <th>Weight of bottle filled with sugar solution, W2 (gm.)  </th>
+                    <th>Weight of sugar solution, W1-W2= Y (gm.) </th>
+                    <th>Density of sugar solution=  Y/X * Density of water (gm/cc) (ρl)  </th>
+                </tr>
+                <tr>
+                    <td style="border: none; border-right: 1px solid #343a40;"></td>
+                    <td style="border: none; border-right: 1px solid #343a40;"></td>
+                    <td style="border: none;"></td>
+                    <td>4%</td>
+                    <td><input type="number" step="0.00001" name="temp" class="w2" ></td>
+                    <td class="Y"></td>
+                    <td class="ds"></td>
+                    
+                </tr>
+                
+                <tr class="1.8 t1">
+                    
+                    <td style="border: none; border-right: 1px solid #343a40;"><input class="w" type="number" step="0.00001" name="temp" id=""></td>
+                    <td style="border: none; border-right: 1px solid #343a40;"><input class="w1" type="number" step="0.00001" name="temp" id=""></td>
+                    <td style="border: none;" class="X"></td>
+                    <td>8%</td>
+                    <td><input type="number" step="0.00001" name="temp" class="w2"></td>
+                    <td class="Y"></td>
+                    <td class="ds"></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td style="border: none; border-right: 1px solid #343a40;"></td>
+                    <td style="border: none; border-right: 1px solid #343a40;"></td>
+                    <td style="border: none;"></td>
+                    <td>12%</td>
+                    <td><input type="number" step="0.00001" name="temp" class="w2"></td>
+                    <td class="Y"></td>
+                    <td class="ds"></td>
+                </tr>
+                
+                <tr>
+                    <td style="border: none; border-right: 1px solid #343a40;"></td>
+                    <td style="border: none; border-right: 1px solid #343a40;"></td>
+                    <td style="border: none;"></td>
+                    <td>Unknown</td>
+                    <td><input type="number" step="0.00001" name="temp" class="w2"></td>
+                    <td class="Y"></td>
+                    <td class="ds"></td>
+                    
+                </tr>
+                
+               
+            </table>
+            <div class="button-list">
+                    <button class="action reset">Reset</button>
+                    <button class="action evaluate-table1-module">Evaluate</button>
+                    
+                </div>
+        </div>
+    </div>
+    <div class="modules table2-module">
+        <h3 class="boxtop">Measurement of Time of Flow and Coefficient of Viscosity of sugar solution</h3>
+        <div class="box">
+            <table class="table2">
+                <tr>
+                    <th>Solutions </th>
+                    <th>Time of flow </th>
+                   <th>Mean Time of flow</th>
+                   <th>Density of solutions (gm/cc)</th> 
+                   <th>Coefficient of viscosity of solutions</th>
+                </tr>
+                <tr>
+                    <td>Water</td>
+                    <td class="sp0">
+                        <input type="number" step="0.00001" name="temp" id="" >
+                        <input type="number" step="0.00001" name="temp" id="">
+                        <input type="number" step="0.00001" name="temp" id="">
+                    </td>
+                    <td class="md"></td>
+                    <td class="ds3"></td>
+                    <td class="v_sugar"></td>
+                
+                </tr>
+                <tr>
+                    <td>4%</td>
+                    <td class="sp1">
+                        <input type="number" step="0.00001" name="temp" id="" >
+                        <input type="number" step="0.00001" name="temp" id="">
+                        <input type="number" step="0.00001" name="temp" id="">
+                    </td>
+                    <td class="md"></td>
+                    <td class="ds3"></td>
+                    <td class="v_sugar"></td>
+                
+                </tr>
+                <tr>
+                    <td>8%</td>
+                    <td class="sp2">
+                        <input type="number" step="0.00001" name="temp" id="" >
+                        <input type="number" step="0.00001" name="temp" id="">
+                        <input type="number" step="0.00001" name="temp" id="">
+                    </td>
+                    <td class="md"></td>
+                    <td class="ds3"></td>
+                    <td class="v_sugar"></td>
+                
+                </tr>
+                <tr>
+                    <td>12%</td>
+                    <td class="sp3">
+                        <input type="number" step="0.00001" name="temp" id="" >
+                        <input type="number" step="0.00001" name="temp" id="">
+                        <input type="number" step="0.00001" name="temp" id="">
+                    </td>
+                    <td class="md"></td>
+                    <td class="ds3"></td>
+                    <td class="v_sugar"></td>
+                
+                </tr>
+                <tr>
+                    <td>Unknown</td>
+                    <td class="sp4">
+                        <input type="number" step="0.00001" name="temp" id="" >
+                        <input type="number" step="0.00001" name="temp" id="">
+                        <input type="number" step="0.00001" name="temp" id="">
+                    </td>
+                    <td class="md"></td>
+                    <td class="ds3"></td>
+                    <td class="v_sugar"></td>
+                
+                </tr>
+               
+            </table>
+            <div class="button-list">
+                    <button class="action reset">Reset</button>
+                    <button class="action evaluate-table2-module">Evaluate</button>
+
+                </div>
+        </div>
+    </div>
+    <div class="modules graph">
+        <h3 class="boxtop">Graph</h3>
+        <div class="box">
+            
+            <canvas id="myChart" width="400" height="400"></canvas>
+            
+            <button class="action module-graph">Show</button>
+        </div>
+    </div>
+    <div class="modules table3-module" style="margin-bottom: 48px;">
+        <h3 class="boxtop">Conclusion</h3>
+        <div class="box" >
+            <!-- <table class="table3">
+                <tr>
+                    <th>Percentage composition of unknown sugar solution</th>
+                    <th>Coefficient of viscosity of water from gragh (cP) </th>
+                    <th>Coefficient of viscosity of water from literature (cP) </th>
+                </tr>
+                <tr>
+                    <td style="color: white;">N</td>
+                    <td></td>
+                    <td class="v-water-theory"></td>
+                
+                </tr>
+               
+            </table> -->
+            <!-- <div class="button-list">
+                    <button class="action reset">Reset</button>
+                    <button class="action reset">Evaluate</button>
+                    <button class="action" class="next-table3-module">Next</button>
+                </div> -->
+                <span>
+                    Complete the Calculation first
+                </span>
+                <button class="action" style="width: 200px;">Display</button>
+        </div>
+    </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
