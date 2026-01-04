@@ -19,21 +19,21 @@ document.querySelector('.result-next').addEventListener('click', () => {
     document.querySelectorAll('.results input').forEach(input => {
         input.disabled = true;
     });
-    document.querySelector('.v-water-theory').textContent=vt_water;
+    
     document.querySelector('.v_sugar').textContent=vt_water;
     console.log(d_water);
 });
 
 // table 1 module
 
-let w= document.querySelector('.w') ;
-let w1= document.querySelector('.w1'); 
+let w_el= document.querySelector('.w') ;
+let w1_el= document.querySelector('.w1'); 
 let X_el= document.querySelector('.X') ;
 let tr1=[];
 let Y=[],w2=[],d_sugar=[];
 document.querySelector('.evaluate-table1-module').addEventListener('click', () => {
-    w=Number(w.value)
-    w1=Number(w1.value)
+    w=Number(w_el.value)
+    w1=Number(w1_el.value)
     document.querySelectorAll('.table1-module input').forEach(input => {
         input.disabled = true;
     });
@@ -149,6 +149,7 @@ const chart= function(){
         }
     }
     });
+    console.log(labels);
 }
 chart()
 document.querySelector('.module-graph').addEventListener('click',chart)
@@ -170,6 +171,7 @@ const eraser = function (val) {
             td.classList.contains('v_sugar')           
         ) {
             td.textContent = "";
+            
         }
     });
 };
@@ -187,11 +189,17 @@ modules.forEach(module=> {
             input.disabled = false;
         })
         let n=modules.indexOf(module)
-        let val= document.querySelectorAll(`.${module} td`)
-        eraser(val)
-        for(i=n+1;i<modules.length;i++){
+        // let val= document.querySelectorAll(`.${module} td`)
+        // eraser(val)
+        for(i=n;i<modules.length;i++){
             val=document.querySelectorAll(`.${modules[i]} td`)
             eraser(val)
+            if (document.querySelectorAll(`.${modules[i]}`).classList.contains(`table1-module`)){
+                tr1=[];
+                Y=[],w2=[],d_sugar=[];
+            }
+            if (document.querySelectorAll(`.${modules[i]}`).classList.contains(`table2-module`))
+                ns=[],v_sugar=[]
         }  
         })
 
@@ -205,8 +213,11 @@ document.querySelector('.table3-module .action').addEventListener('click',functi
     if (document.querySelector('.table2-module .md').textContent !="" &&
         document.querySelector('.table1-module .ds').textContent !="" &&
         rt != null && vt_water != null && d_water != null
-        
-        )
-        document.querySelector('.table3-module span').textContent=`The concentration of unknown solution lies between ${labels[unknown_posn-1]} and ${labels[unknown_posn+1]}`
+        ){
+            let unknown_posn=labels.indexOf("Unknown")
+            document.querySelector('.table3-module span').textContent=`The concentration of unknown solution lies between ${labels[unknown_posn-1]} and ${labels[unknown_posn+1]}`
+            // labels.push("-")
+            document.querySelector(".table3-module .action").disabled = true;
+        }
     
 })
