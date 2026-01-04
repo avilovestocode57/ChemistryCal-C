@@ -208,7 +208,7 @@ modules.forEach(module=> {
 
 // document.querySelector('.reset-graph').addEventListener('click',chart)
 let unknown_posn=labels.indexOf("Unknown")
-labels.push("-")
+labels.push('-')
 document.querySelector('.table3-module .action').addEventListener('click',function(){
     if (document.querySelector('.table2-module .md').textContent !="" &&
         document.querySelector('.table1-module .ds').textContent !="" &&
