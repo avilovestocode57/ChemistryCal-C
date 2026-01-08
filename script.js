@@ -92,7 +92,7 @@ document.querySelector('.evaluate-table1-module').addEventListener('click', () =
     // dst2_el[0].textContent=d_water;
 
     for(i=0;i<w2_el.length;i++){
-        Y_el[i].textContent=(w1-(+Number(w2_el[i].value).toFixed(4))).toFixed(4)
+        Y_el[i].textContent=((+Number(w2_el[i].value).toFixed(4))-w).toFixed(4)
         Y.push(Number(Y_el[i].textContent))
 
         d_sugar_el[i].textContent=(((Y[i])*d_water)/X).toFixed(5)
@@ -150,7 +150,7 @@ document.querySelector('.evaluate-table2-module').addEventListener('click', () =
     let v_sugar_el=document.querySelectorAll('.v_sugar')
     let v_solution=0
     for(i=0;i<4;i++){
-        v_solution = +((nw/ns[i]) * (d_sugar[i]/d_water)*vt_water).toFixed(2)
+        v_solution = +((ns[i]/nw) * (d_sugar[i]/d_water)*vt_water).toFixed(3)
         v_sugar_el[i+1].textContent=v_solution 
         v_sugar.push(v_solution);
     }    
