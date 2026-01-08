@@ -138,7 +138,7 @@ document.querySelector('.evaluate-table2-module').addEventListener('click', () =
         drops.forEach(input=>{
             sum+=Number(input.value)
         })
-        mean=+(sum/3).toFixed(2);
+        mean=+(+(sum.toFixed(2))/2).toFixed(2);
         md_el[i].textContent=mean;
         if (i==0){
             nw=Number(md_el[i].textContent)
