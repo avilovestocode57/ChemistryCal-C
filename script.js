@@ -50,7 +50,7 @@ let vt_water_value=0;
 document.querySelector('.result-next').addEventListener('click', () => {
     rt=Number(rt_el.value)
     d_water=Number(d_water_el.value).toFixed(5)
-    vt_water=Number(vt_water_el.value).toFixed(2)
+    vt_water=Number(vt_water_el.value).toFixed(3)
     document.querySelectorAll('.results input').forEach(input => {
         input.disabled = true;
     });
